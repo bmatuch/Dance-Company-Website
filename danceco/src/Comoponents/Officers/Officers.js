@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllOfficers } from "../../Common/Services/GetOfficerData";
-import OfficersCollapse from "./OfficersCollapse.js";
+import OfficersCollapse from "./OfficersCollapse"
 
 const Officers = () => {
   const [officers, setOfficers] = useState([]);

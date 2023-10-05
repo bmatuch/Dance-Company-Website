@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-
-const Home = () => {
-
+export default function About() {
     return (
-        <div>
-            <h1>This is the about page component.</h1>
-        </div>
+      <section>
+        <h1>Welcome to the About component</h1>
+        <p>This is the about component</p>
+      </section>
     );
-};
+  }
