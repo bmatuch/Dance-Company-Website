@@ -10,8 +10,8 @@ const OfficerList = ({ officers }) => {
             {officer.get("firstName")} {officer.get("lastName")}
             <br />
             Role: {officer.get("role")}
-            <Collapsible trigger={<button className="button">Learn what dances {officer.get("firstName")} is choreographing!</button>}>
-              <p>{officer.get("favorite")}</p>
+            <Collapsible trigger={<button className="button">Learn what dance {officer.get("firstName")} is choreographing!</button>}>
+              <p>{officer.get("danceId").get("danceName")}</p>
             </Collapsible>
           </li>
         </p>
