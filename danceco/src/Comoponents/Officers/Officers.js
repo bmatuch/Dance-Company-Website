@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Collapsible from "react-collapsible";
 import { getAllOfficers } from "../../Common/Services/GetOfficerData";
-import OfficersCollapse from "./OfficersCollapse"
 
 const Officers = () => {
   const [officers, setOfficers] = useState([]);
@@ -23,7 +23,9 @@ const Officers = () => {
               <li key="officer.id">
                 {" "}
                 {officer.get("firstName")} {officer.get("lastName")}{" "}
-                {OfficersCollapse}
+                <Collapsible trigger={<button className="button">Learn more about {officer.get("firstName")}!</button>}>
+                <p>{officer.get("favorite")}</p>
+              </Collapsible>
               </li>
             </p>
           );
