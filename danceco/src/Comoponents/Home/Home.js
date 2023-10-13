@@ -1,3 +1,5 @@
+// home page - will eventually add more information about how to join DanceCo 
+// possibly add an application tab
 export default function Home() {
     return (
       <section>

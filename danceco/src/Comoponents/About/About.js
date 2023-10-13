@@ -1,3 +1,4 @@
+// info to learn history of DanceCo
 export default function About() {
     return (
       <section>

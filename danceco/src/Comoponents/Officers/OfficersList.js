@@ -1,6 +1,8 @@
 import React from "react";
 import Collapsible from "react-collapsible";
-
+// display officer list, child of Officers.js 
+// child will make things cleaner as we add more components
+// also get dance objects associated with each officer
 const OfficerList = ({ officers }) => {
   return (
     <ul className="list-unstyled">

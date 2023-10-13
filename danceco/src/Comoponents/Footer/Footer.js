@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// footer for navigation
 const Footer = () => (
   <footer>
     <nav>
