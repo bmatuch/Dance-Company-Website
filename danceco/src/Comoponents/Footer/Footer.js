@@ -13,6 +13,9 @@ const Footer = () => (
         <li>
           <Link to="/officers">Officers</Link>
         </li>
+      <li>
+          <Link to="/profile">View Audition Profile</Link>
+        </li>
       </ul>
     </nav>
   </footer>
