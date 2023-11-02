@@ -13,8 +13,7 @@ const Officers = () => {
 
   return (
     <div>
-      <h1>Meet your DanceCo Officers</h1>
-      <hr />
+      <h1>Meet your Officers</h1>
       <OfficersList officers={officers} /> 
     </div>
   );

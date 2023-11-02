@@ -3,8 +3,7 @@
 export default function Home() {
     return (
       <section>
-        <h1>Welcome to the Dance Co. Website</h1>
-        <p>Explore!</p>
+        <h1>Notre Dame Dance Company</h1>
       </section>
     );
   }

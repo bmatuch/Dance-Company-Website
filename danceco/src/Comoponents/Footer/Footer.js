@@ -1,24 +1,22 @@
 import { Link } from "react-router-dom";
 // footer for navigation
 const Footer = () => (
-  <footer>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+    <nav class="navbar navbar-light bg-light">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
         </li>
-        <li>
-          <Link to="/about">About</Link>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
         </li>
-        <li>
-          <Link to="/officers">Officers</Link>
+        <li class="nav-item">
+          <a class="nav-link" href="/officers">Officers</a>
         </li>
-      <li>
-          <Link to="/profile">View Audition Profile</Link>
+      <li class="nav-item">
+          <a class="nav-link" href="/profile">View Audition Profile</a>
         </li>
       </ul>
     </nav>
-  </footer>
 );
 
 export default Footer;

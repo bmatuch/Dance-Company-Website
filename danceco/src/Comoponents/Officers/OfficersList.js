@@ -9,11 +9,14 @@ const OfficerList = ({ officers }) => {
       {officers.map((officer) => (
         <p key={officer.id}>
           <li>
-            {officer.get("firstName")} {officer.get("lastName")}
-            <br />
-            Role: {officer.get("role")}
-            <Collapsible trigger={<button className="button">Learn what dance {officer.get("firstName")} is choreographing!</button>}>
-              <p>{officer.get("danceId").get("danceName")}</p>
+            <h2> {officer.get("role")} </h2>
+            <Collapsible trigger = {<button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="panelsStayOpen-collapse"> <h3>{officer.get("firstName")} {officer.get("lastName")}</h3></button>}>
+                  <p><b>Hometown</b>: {officer.get("hometown")}</p>
+                  <p><b>Dance Experience</b>: {officer.get("experience")}</p>
+                  <p><b>Year:</b> {officer.get("year")}</p>
+                  <p><b>Dorm:</b> {officer.get("dorm")}</p>
+                  <p><b>Major:</b> {officer.get("major")}</p>
+                  <p><b>Favorite Part of DanceCo:</b> {officer.get("favorite")}</p>
             </Collapsible>
           </li>
         </p>
