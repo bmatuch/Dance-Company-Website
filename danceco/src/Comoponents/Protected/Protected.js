@@ -6,7 +6,7 @@ const Protected = ({ element: Component, ...rest }) => {
   console.log("element: ", Component);
   const navigate = useNavigate();
   const goBackHandler = () => {
-    navigate("/auth");
+    navigate("/profile");
   };
   if (checkUser()) {
     return <Component />;

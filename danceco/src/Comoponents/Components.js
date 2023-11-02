@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthModule from "./Profile/Auth.js";
 import AuthRegister from "./Profile/AuthRegister";
 import AuthLogin from "./Profile/AuthLogin";
+import Protected from "./Protected/Protected.js";
 import "../../src/index.css";
 
 
@@ -20,7 +21,7 @@ const Components = () => {
         <Route path="/profile/login" element={<AuthLogin />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path='/officers' element={<Officers />} />
+        <Route path='/officers' element={<Protected path="/officers" element={Officers} />} />
       </Routes>
     </Router>
   );
