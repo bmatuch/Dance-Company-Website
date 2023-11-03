@@ -3,6 +3,7 @@ import { checkUser, loginUser } from "./AuthService";
 import AuthForm from "./AuthForm";
 import { useNavigate } from "react-router-dom";
 
+
 const AuthLogin = () => {
   const navigate = useNavigate();
 
@@ -15,8 +16,7 @@ const AuthLogin = () => {
 
   useEffect(() => {
     if (checkUser()) {
-      alert("You are already logged in");
-      navigate("/");
+      navigate("/login/profile");
     }
   }, [navigate]);
 
@@ -60,6 +60,7 @@ const AuthLogin = () => {
         onChange={onChangeHandler}
         onSubmit={onSubmitHandler}
       />
+      <p>Don't have an account? <a href="/create">Click here</a> to create one.</p>
     </div>
   );
 };

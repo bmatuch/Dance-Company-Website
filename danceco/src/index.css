@@ -19,11 +19,11 @@ h1 {
 }
 
 div {
-  margin: 20px;
+  margin: 5px;
 }
 
 h2 {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 h3 {
@@ -32,5 +32,39 @@ h3 {
 
 .navbar {
   color: aqua;
+}
+
+h2.accordion-header{
+  margin:0;
+}
+
+a.nav-link {
+  font-size: 20px;
+}
+
+div.container{
+  margin-left: unset;
+}
+
+div.accordion {
+  --bs-accordion-active-bg: white;
+  --bs-accordion-btn-focus-box-shadow: white;
+}
+
+div.accordion-item{
+  margin:auto;
+  border:none;
+}
+
+button.accordion-button {
+  width:auto;
+}
+
+.accordion-button:focus {
+  box-shadow: white;
+}
+
+input.form-control {
+  width:50%;
 }
 

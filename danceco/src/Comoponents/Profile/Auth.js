@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { checkUser } from "./AuthService.js";
+import Button from 'react-bootstrap/Button';
 
 const AuthModule = () => {
   const navigate = useNavigate();
@@ -13,14 +14,13 @@ const AuthModule = () => {
   }, [navigate]);
   return (
     <div>
+      <Link to="/profile/login">
+        <Button type="submit">Login</Button>
+      </Link>
       <Link to="/profile/create">
         <button>Create</button>
       </Link>
-      <br />
-      <br />
-      <Link to="/profile/login">
-        <button>Login</button>
-      </Link>
+
     </div>
   );
 };

@@ -1,20 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { checkUser } from "../Profile/AuthService";
+import Button from 'react-bootstrap/Button';
 
 const Protected = ({ element: Component, ...rest }) => {
-  console.log("element: ", Component);
   const navigate = useNavigate();
   const goBackHandler = () => {
-    navigate("/auth");
+    navigate("/login");
   };
   if (checkUser()) {
-    return <Component />;
+    return (
+      <div>
+        <h2>
+          Profile
+        </h2>
+      </div>
+    );
   } else {
     return (
       <div>
-        <p>Not allowed!</p>
-        <button onClick={goBackHandler}>Go back</button>
+        <p>You're not logged in.</p>
+        <Button onClick={goBackHandler}>Login</Button>
       </div>
     );
   }
