@@ -16,12 +16,12 @@ const Components = () => {
     <Router>
       <Footer />
       <Routes>
-        <Route path="/profile" element={<AuthModule />} />
-        <Route path="/profile/create" element={<AuthRegister />} />
-        <Route path="/profile/login" element={<AuthLogin />} />
+        <Route path="/login/profile" element={<Protected path="/profile" element={Protected} />} />
+        <Route path="/create" element={<AuthRegister />} />
+        <Route path="/login" element={<AuthLogin />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path='/officers' element={<Protected path="/officers" element={Officers} />} />
+        <Route path="/officers" element={<Officers />} />
       </Routes>
     </Router>
   );
