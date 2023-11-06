@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Bricolage+Grotesque:opsz,wght@12..96,200&family=Corben&family=Inter+Tight&family=Trocchi&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin-top: 25px;
+  font-family: 'Bricolage Grotesque', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,13 +12,27 @@ code {
     monospace;
 }
 
-h1 {
-  margin-top: 30px;
+h1.heading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  margin-top: 25px;
   margin-left: 20px;
   color: rgb(45, 45, 199);
 }
 
+p {
+  margin-left: 20px;
+  width: 50%;
+}
+
+h1.logo {
+  font-family: 'Corben', serif;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 50px;
+}
+
 div {
+  font-family: 'Bricolage Grotesque', sans-serif;
   margin: 5px;
 }
 
@@ -68,3 +82,12 @@ input.form-control {
   width:50%;
 }
 
+img {
+  width:300px;
+  height:350px;
+  border-radius: 50%;
+}
+
+div.accordion-body{
+  margin-left: 35px;
+}
