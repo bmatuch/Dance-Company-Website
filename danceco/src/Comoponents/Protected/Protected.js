@@ -11,9 +11,9 @@ const Protected = ({ element: Component, ...rest }) => {
   if (checkUser()) {
     return (
       <div>
-        <h2>
+        <h1 class='heading'>
           Profile
-        </h2>
+        </h1>
       </div>
     );
   } else {

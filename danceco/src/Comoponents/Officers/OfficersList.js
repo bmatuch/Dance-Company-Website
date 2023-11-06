@@ -12,16 +12,17 @@ const OfficerList = ({ officers }) => {
       <p key={officer.id}>
         <li>
           <h2> {officer.get("role")} </h2>
+          <img src={officer.get('photo').url()}></img>
           <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header> <h2>{officer.get("firstName")} {officer.get("lastName")}&nbsp;&nbsp;</h2></Accordion.Header>
             <Accordion.Body>
-              <p><b>Hometown</b>: {officer.get("hometown")}</p>
-              <p><b>Dance Experience</b>: {officer.get("experience")}</p>
-              <p><b>Year:</b> {officer.get("year")}</p>
-              <p><b>Dorm:</b> {officer.get("dorm")}</p>
-              <p><b>Major:</b> {officer.get("major")}</p>
-              <p><b>Favorite Part of DanceCo:</b> {officer.get("favorite")}</p>
+              <p><b>Hometown</b>: {officer.get("hometown")}<br />
+              <b>Dance Experience</b>: {officer.get("experience")}<br />
+              <b>Year:</b> {officer.get("year")}<br />
+              <b>Dorm:</b> {officer.get("dorm")}<br />
+              <b>Major:</b> {officer.get("major")}<br />
+              <b>Favorite Part of DanceCo:</b> {officer.get("favorite")}</p>
             </Accordion.Body>
             </Accordion.Item>
             </Accordion>
