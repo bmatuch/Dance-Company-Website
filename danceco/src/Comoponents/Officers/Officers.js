@@ -14,6 +14,7 @@ const Officers = () => {
   return (
     <div>
       <h1 class='heading'>Meet your Officers</h1>
+      <br />
       <OfficersList officers={officers} /> 
     </div>
   );
