@@ -3,7 +3,8 @@ import { checkUser, loginUser } from "./AuthService";
 import AuthForm from "./AuthForm";
 import { useNavigate } from "react-router-dom";
 
-
+// in future, we could add an edit profile option to the login
+// this will allow the user to add updates to their profile
 const AuthLogin = () => {
   const navigate = useNavigate();
 
