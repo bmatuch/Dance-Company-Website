@@ -28,7 +28,7 @@ const AuthLogin = () => {
           alert(
             `${userLoggedIn.get("first_name")}, you successfully logged in!`
           );
-          navigate("/");
+          navigate("/login/profile");
         }
         setAdd(false);
       });
