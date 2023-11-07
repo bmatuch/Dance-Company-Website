@@ -1,5 +1,6 @@
 import React from "react";
-
+// in the future, we could take more relevant information 
+// such as their dance experience/things that will be used in the audition process
 const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
   return (
     <form onSubmit={onSubmit} autoComplete="off">

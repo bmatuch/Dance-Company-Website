@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { checkUser, createUser } from "./AuthService";
 import AuthForm from "./AuthForm";
 import { useNavigate } from "react-router-dom";
-
+// in the future, we could make register be more like making an application to dance co
+// we could add in an audition page that the user is directed to after making an account
+// on this page, the user could schedule an audition with the club
 const AuthReg = () => {
   const navigate = useNavigate();
 

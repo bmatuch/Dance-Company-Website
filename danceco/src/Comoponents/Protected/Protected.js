@@ -1,14 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { checkUser } from "../Profile/AuthService";
-import Button from 'react-bootstrap/Button';
 
+// protected to make sure a profile isn't displayed before the user logs in
 const Protected = ({ element: Component, ...rest }) => {
   const navigate = useNavigate();
-  const goBackHandler = () => {
-    navigate("/login");
-  };
+  
+  useEffect(() => {
+    if (!checkUser()) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
   if (checkUser()) {
+    // in the future, this will also display information about the user's profile 
+    // like their audition status
     return (
       <div>
         <h1 class='heading'>
@@ -16,14 +22,10 @@ const Protected = ({ element: Component, ...rest }) => {
         </h1>
       </div>
     );
-  } else {
-    return (
-      <div>
-        <p>You're not logged in.</p>
-        <Button onClick={goBackHandler}>Login</Button>
-      </div>
-    );
-  }
+    }
+    
+    return null;
+  
 };
 
 export default Protected;
