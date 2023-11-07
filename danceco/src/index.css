@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Bricolage+Grotesque:opsz,wght@12..96,200&family=Corben&family=Inter+Tight&family=Trocchi&display=swap');
 
+img.group {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 60%;
+  border-radius: initial;
+}
+
+nav.navbar.navbar-expand.navbar-light.bg-primary {
+  background-color: #FFB9FB !important;
+}
+
+a.nav-link {
+  font-weight: bold;
+}
+
 body {
   margin-top: 25px;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -14,9 +31,10 @@ code {
 
 h1.heading {
   font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: bold;
   margin-top: 25px;
   margin-left: 20px;
-  color: rgb(45, 45, 199);
+  color: #95C5FF;
 }
 
 p {
@@ -90,4 +108,12 @@ img {
 
 div.accordion-body{
   margin-left: 35px;
+}
+
+div.ml-auto.navbar-nav {
+  margin-right: -100px;
+}
+
+h2.role {
+  margin-left: 13%
 }

@@ -1,5 +1,8 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 // display officer list, child of Officers.js 
 // child will make things cleaner as we add more components
@@ -11,7 +14,7 @@ const OfficerList = ({ officers }) => {
     {officers.map((officer) => (
       <p key={officer.id}>
         <li>
-          <h2> {officer.get("role")} </h2>
+          <h2 class="role"> <b>{officer.get("role")}</b> </h2>
           <img src={officer.get('photo').url()}></img>
           <Accordion>
           <Accordion.Item eventKey="0">

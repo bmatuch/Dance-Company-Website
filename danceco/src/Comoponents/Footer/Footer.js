@@ -6,12 +6,15 @@ import Navbar from 'react-bootstrap/Navbar';
 const Footer = () => (
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
-        <Nav className="me-auto">
+        <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/officers">Officers</Nav.Link>
           <Nav.Link href="/login">Profile</Nav.Link>
+        </Nav>
+        <Nav className="ml-auto">
           <Nav.Link href="https://www.instagram.com/nddanceco/"> <i class="bi bi-instagram"></i> </Nav.Link>
+          <Nav.Link href="mailto:nddanceco@nd.edu"><i class="bi bi-envelope-heart"></i> </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
