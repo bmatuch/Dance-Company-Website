@@ -11,6 +11,7 @@ const Footer = () => (
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/officers">Officers</Nav.Link>
           <Nav.Link href="/login">Profile</Nav.Link>
+          <Nav.Link href="/dances">Dances</Nav.Link>
         </Nav>
         <Nav className="ml-auto">
           <Nav.Link href="https://www.instagram.com/nddanceco/"> <i class="bi bi-instagram"></i> </Nav.Link>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthRegister from "./Profile/AuthRegister";
 import AuthLogin from "./Profile/AuthLogin";
 import Protected from "./Protected/Protected.js";
+import Dances from "./Dances/Dances.js";
 import "../../src/index.css";
 
 
@@ -21,6 +22,7 @@ const Components = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/officers" element={<Officers />} />
+        <Route path="/dances" element={<Dances />} /> 
       </Routes>
     </Router>
   );
