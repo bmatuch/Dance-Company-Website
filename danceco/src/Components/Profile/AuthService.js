@@ -53,10 +53,9 @@ export async function checkAdmin() {
   // find the current user in Users
   query.equalTo("objectId", currentUser.id);
   const user = await query.first(); 
-  console.log(user);
   
 
-  if(user.isAdmin) {
+  if(user.get("isAdmin") == true) {
     return true;
   }
 

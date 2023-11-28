@@ -4,6 +4,8 @@ import { checkUser } from "../Profile/AuthService";
 import { checkAdmin } from "../Profile/AuthService"; 
 import { getAllUsers } from "../../Common/Services/GetUserData";
 import ProtectedProfiles  from "./ProtectedProfiles";
+import LogOut from "./LogOut";
+
 
 // protected to make sure a profile isn't displayed before the user logs in
 const Protected = ({ element: Component, ...rest }) => {
@@ -14,9 +16,7 @@ const Protected = ({ element: Component, ...rest }) => {
       setUsers(users);
     });
   }, []);
-  console.log("hello");
-  console.log(users);
-  
+
   const navigate = useNavigate();
   useEffect(() => {
     if (!checkUser()) {
@@ -24,21 +24,33 @@ const Protected = ({ element: Component, ...rest }) => {
     }
   }, [navigate]);
 
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      const adminStatus = await checkAdmin();
+      setIsAdmin(adminStatus);
+    }
+    fetchData();
+  });
+
+
   if (checkUser()) {
-    // in the future, this will also display information about the user's profile 
-    // like their audition status
-    if (checkAdmin()) {
+    
+    if (isAdmin == true) {
       return (
         <div>
           <h1 className="heading">Admin Dashboard</h1>
           <br />
           <ProtectedProfiles users={users} /> 
+          <LogOut />
         </div>
       );
     } else {
       return (
         <div>
           <h1 className="heading">Profile</h1>
+          <br /> 
+          <LogOut />
         </div>
       );
     }
