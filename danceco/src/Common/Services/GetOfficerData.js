@@ -6,7 +6,6 @@ export const getAllOfficers = () => {
   const query = new Parse.Query(OfficerData);
   query.include('danceId');
   return query.find().then((results) => {
-    // return Lesson object with objectId: role
     return results;
   });
 };

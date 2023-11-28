@@ -42,3 +42,30 @@ export const loginUser = (currUser) => {
 export const checkUser = () => {
   return Parse.User.current()?.authenticated;
 };
+
+export async function checkAdmin() {
+  const Users = Parse.Object.extend("User");
+  const query = new Parse.Query(Users);
+
+  // get the current user 
+  const currentUser = Parse.User.current();
+  
+  // find the current user in Users
+  query.equalTo("objectId", currentUser.id);
+  const user = await query.first(); 
+  console.log(user);
+  
+
+  if(user.isAdmin) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+  
+
+  
+};
+
+
