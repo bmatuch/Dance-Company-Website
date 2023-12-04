@@ -8,7 +8,6 @@ export const getAllUsers = () => {
   query.equalTo("isAdmin", false);
   
   return query.find().then((results) => {
-    console.log(results);
     return results;
   });
 };

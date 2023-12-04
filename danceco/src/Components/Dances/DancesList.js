@@ -6,31 +6,23 @@ import Col from 'react-bootstrap/Col';
 const DanceList = ({ dances }) => {
   
   return (
-    <Container>
+    <Container id="dances">
       {dances.map((dance) => (
         <Col key={dance.id}>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              <h2 className="danceName"><b>{dance.get("danceName")}</b></h2>
-            </Accordion.Header>
-            <AccordionBody>
-              <p>
-                <h3><b>Choreographer:</b> {dance.get("choreo").get("isOfficer") ? (
-                <a href="/officers">
+          <h2 className="danceName">{dance.get("danceName")}&nbsp;&nbsp;</h2>
+              <p className="dance">
+                <b>Style:</b> {dance.get("danceStyle")}<br />
+                <b>Choreographer:</b> {dance.get("choreo").get("isOfficer") ? (
+                <a href="/officers" className="officers-route">
                 {dance.get("choreo").get("choreoName")}
                 </a>
                 ) : (
                   dance.get("choreo").get("choreoName")
-                )}<br />
-                </h3>
-                <h3>
-                  <b>Rehearsal Time:</b> {dance.get("rehearsal")}<br />
-                </h3>
+                )}
+                  <br />
+                  <b>Rehearsal Time:</b> {dance.get("rehearsalDay")}s from {dance.get("rehearsalTime")} in {dance.get("rehearsalLocation")}
+                  
               </p>
-            </AccordionBody>
-            </Accordion.Item>
-          </Accordion>
         </Col>
       ))}
     </Container>
