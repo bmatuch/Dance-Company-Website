@@ -1,12 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Bricolage+Grotesque:opsz,wght@12..96,200&family=Corben&family=Inter+Tight&family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 img.group {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   border-radius: initial;
+  border: 10px solid;
+  border-color: #FFB9FB;
+}
+
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+  border-radius: initial;
+  border: 10px solid;
+  border-color: #FFB9FB;
 }
 
 nav.navbar.navbar-expand.navbar-light.bg-primary {
@@ -15,11 +30,12 @@ nav.navbar.navbar-expand.navbar-light.bg-primary {
 
 a.nav-link {
   font-weight: bold;
+  font-family: 'Hedvig Letters Sans', sans-serif;
 }
 
 body {
   margin-top: 25px;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Hedvig Letters Serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,23 +46,52 @@ code {
 }
 
 h1.heading {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Hedvig Letters Sans', sans-serif;
   font-weight: bold;
   margin-top: 25px;
   margin-left: 20px;
   color: #95C5FF;
 }
 
-p {
-  margin-left: 20px;
-  width: 50%;
+h1.heading-center {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+  font-weight: bold;
+  margin-top: 35px;
+  text-align: center;
+  color: #95C5FF;
+  font-size: 50px;
+}
+
+h3.officer {
+  font-weight: bold;
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+h5.role {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+p.desc {
+  margin-left: 70px;
+  margin-right: 70px;
+  text-align: center;
 }
 
 h1.logo {
-  font-family: 'Corben', serif;
+  font-family: 'Hedvig Letters Sans', sans-serif;
   margin-top: 25px;
   text-align: center;
   font-size: 50px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+h3.logo2 {
+  text-align: center;
+  font-family: 'Hedvig Letters Sans', sans-serif;
+  padding-bottom: 30px;
+  color: grey;
+  font-weight: bold;
 }
 
 div {
@@ -55,10 +100,6 @@ div {
 
 h2 {
   margin-left: 40px;
-}
-
-h3 {
-  margin-left: 20px;
 }
 
 .navbar {
@@ -73,8 +114,13 @@ a.nav-link {
   font-size: 20px;
 }
 
-div.container{
-  margin-left: unset;
+div#nav.container{
+  margin-left: unset; 
+}
+
+div#officer {
+  margin: auto;
+  padding: 10px;
 }
 
 div.accordion {
@@ -99,21 +145,60 @@ input.form-control {
   width:50%;
 }
 
-img {
-  width:300px;
-  height:350px;
-  border-radius: 50%;
-}
-
 div.accordion-body{
   margin-left: 35px;
 }
 
 div.ml-auto.navbar-nav {
-  margin-right: -100px;
+  margin-right: -200px;
 }
 
 h2.role {
   margin-left: 13%
 }
+
+button#logout.btn.btn-primary {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+img.card-img-top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 425px;
+}
+
+
+h2.danceName {
+  font-family: 'Questrial', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p.dance {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+  text-align: center;
+}
+
+a.officers-route {
+  text-decoration: none;
+}
+
+div#dances.container {
+  text-align: center;
+  background-color: #e3e3e3;
+  width: 80%;
+  height: 80%;
+  padding-top: 15px;
+  padding-bottom:15px;
+}
+
+div#profiles.container{
+  margin-left: 0px; 
+}
+
+
 

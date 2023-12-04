@@ -7,7 +7,7 @@ import ProtectedProfiles  from "./ProtectedProfiles";
 import LogOut from "./LogOut";
 
 
-// protected to make sure a profile isn't displayed before the user logs in
+// Protected to make sure a profile isn't displayed before the user logs in
 const Protected = ({ element: Component, ...rest }) => {
 
   const [users, setUsers] = useState([]);
