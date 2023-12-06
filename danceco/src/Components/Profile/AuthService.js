@@ -1,6 +1,7 @@
 import Parse from "parse";
 
 export const createUser = (newUser) => {
+
   const user = new Parse.User();
 
   user.set("username", newUser.email);
@@ -8,6 +9,21 @@ export const createUser = (newUser) => {
   user.set("last_name", newUser.last_name);
   user.set("password", newUser.password);
   user.set("email", newUser.email);
+  user.set("danceExperience", newUser.experience);
+  user.set("year", newUser.year);
+
+  const profile = new Parse.Object("Profile");
+  profile.set("notes", "NA");
+  profile.set("auditionDate", "NA");
+  profile.set("status", "Not Yet Auditioned");
+  profile.set("teamPlacement", "NA");
+  profile.set("first_name", newUser.first_name);
+  profile.set("last_name", newUser.last_name);
+  profile.set("year", newUser.year);
+  profile.set("danceExperience", newUser.experience);
+  profile.set("adminRole", "None");
+
+  user.set("profile", profile);
 
   console.log("User: ", user);
 
@@ -62,9 +78,37 @@ export async function checkAdmin() {
   else {
     return false;
   }
-  
-
-  
 };
 
+export async function checkPresident() {
+  const Users = Parse.Object.extend("User");
+  const query = new Parse.Query(Users);
+
+  // get the current user 
+  const currentUser = Parse.User.current();
+  
+  // find the current user in Users
+  query.equalTo("objectId", currentUser.id);
+  const user = await query.first(); 
+  
+
+  if(user.get("adminRole") == 'President') {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+};
+
+export function getUserId() {
+  //const Users = Parse.Object.extend("User");
+
+  // get the current user 
+  const currentUser = Parse.User.current();
+  
+  // find the current user in Users
+  console.log(currentUser.id);
+  return currentUser.id;
+};
 

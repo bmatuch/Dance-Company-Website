@@ -55,13 +55,15 @@ const AuthLogin = () => {
 
   return (
     <div>
+      <h1 class='heading'>Login</h1>
       <AuthForm
         user={currentUser}
         isLogin={true}
         onChange={onChangeHandler}
         onSubmit={onSubmitHandler}
       />
-      <p>Don't have an account? <a href="/create">Click here</a> to create one.</p>
+      <br />
+      <p className="acc">Don't have an account? <a href="/create">Click here</a> to create one.</p>
     </div>
   );
 };

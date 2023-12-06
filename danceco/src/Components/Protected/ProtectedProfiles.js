@@ -15,7 +15,7 @@ const ProfileList = ({ users }) => {
             <Card>
               <Card.Body>
                 <h3>{user.get("first_name")} {user.get("last_name")}&nbsp;&nbsp; </h3>
-                <ViewProfileButton user={user.id}/>
+                <ViewProfileButton profileId={user.get("profile")?.id}/>
               </Card.Body>
             </Card>
           </Col>
