@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import Parse from "parse";
-
+// allows admin to edit profiles in order to add comments, audition results, etc.
 const EditProfile = () => {
 
     const navigate = useNavigate();

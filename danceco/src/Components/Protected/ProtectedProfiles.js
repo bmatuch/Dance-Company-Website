@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ViewProfileButton from "./ViewProfileButton"
-
+// show all of the profiles available to admin 
+// does not include admin profiles
 const ProfileList = ({ users }) => {
 
   return (

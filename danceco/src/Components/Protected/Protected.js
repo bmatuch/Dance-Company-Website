@@ -49,7 +49,7 @@ const Protected = ({ element: Component, ...rest }) => {
 
   
   if (checkUser()) {
-
+    // if admin is president, they will login to a president dashboard
     if (isAdmin == true && isPrez == true) {
       return (
         <div>
@@ -61,7 +61,7 @@ const Protected = ({ element: Component, ...rest }) => {
         </div>
       );
     }
-    
+    // else if normal admin, allows admin to edit profiles
     else if (isAdmin == true) {
       return (
         <div>
@@ -72,7 +72,7 @@ const Protected = ({ element: Component, ...rest }) => {
         </div>
       );
       }
-
+    // else normal user and their profile is displayed
     else {
       return (
         <div>

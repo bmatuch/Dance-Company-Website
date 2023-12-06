@@ -1,5 +1,5 @@
 import React from "react";
-
+// auth form displays fields for the user to create or login to account
 const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
   return (
     <form onSubmit={onSubmit} autoComplete="off">

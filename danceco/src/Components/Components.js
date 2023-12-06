@@ -18,7 +18,7 @@ const Components = () => {
       <Footer />
       <Routes>
         <Route path="/login/profile/" element={<Protected path="/profile" element={Protected} />} />
-        <Route path="/login/profile/view/:profileId" element={<ViewProfile />} />  
+        <Route path="/login/profile/view/:profileId" element={<ViewProfile/>} />  
         <Route path="/login/profile/edit/:profileId" element={<EditProfile />} />
         <Route path="/create" element={<AuthRegister />} />
         <Route path="/login" element={<AuthLogin />} />

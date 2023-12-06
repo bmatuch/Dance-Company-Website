@@ -11,6 +11,7 @@ import Duet from '../../static/images/Duet.jpg'
 import Nikki from '../../static/images/Nikki.jpg'
 
 // set all the dances from the database 
+// display all of the dances for the current showcase
 const Dances = () => {
   const [dances, setDances] = useState([]);
 

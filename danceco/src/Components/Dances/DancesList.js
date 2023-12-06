@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
 import Col from 'react-bootstrap/Col';
 const DanceList = ({ dances }) => {
-  
+  // display each dance's choreo, style, rehearsal time for the user to learn more 
   return (
     <Container id="dances">
       {dances.map((dance) => (

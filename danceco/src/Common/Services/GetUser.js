@@ -1,6 +1,6 @@
 import Parse from "parse";
 
-// READ Operation: 
+// READ Operation: get a specific profile for a user 
 export const GetUser = (profileId) => {
   const Profile = Parse.Object.extend("Profile");
   const query = new Parse.Query(Profile);

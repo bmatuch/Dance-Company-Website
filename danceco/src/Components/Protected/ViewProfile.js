@@ -4,7 +4,7 @@ import { GetUser } from "../../Common/Services/GetUser";
 import Container from 'react-bootstrap/Container';
 import EditProfileButton from "./EditProfileButton";
 
-
+// displays a specific profile after using the view profile button
 const ViewProfile = () => {
 
     const { profileId } = useParams();

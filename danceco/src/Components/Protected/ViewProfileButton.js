@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-
+// button to view a specific profile
 const ViewProfileButton = ({profileId}) => {
     const navigate = useNavigate();
     const ProfileHandler = () => { 
