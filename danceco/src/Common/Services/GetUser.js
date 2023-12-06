@@ -1,12 +1,13 @@
 import Parse from "parse";
 
 // READ Operation: 
-export const GetUser = (userId) => {
-  const Users = Parse.Object.extend("User");
-  const query = new Parse.Query(Users);
-  query.equalTo("objectId", userId);
-  
+export const GetUser = (profileId) => {
+  const Profile = Parse.Object.extend("Profile");
+  const query = new Parse.Query(Profile);
+  query.equalTo("objectId", profileId);
+    
   return query.find().then((results) => {
+    console.log(results);
     return results;
   });
 };

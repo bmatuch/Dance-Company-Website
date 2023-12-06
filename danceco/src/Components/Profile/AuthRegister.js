@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { checkUser, createUser } from "./AuthService";
 import AuthForm from "./AuthForm";
 import { useNavigate } from "react-router-dom";
+
 // in the future, we could make register be more like making an application to dance co
 // we could add in an audition page that the user is directed to after making an account
 // on this page, the user could schedule an audition with the club
@@ -12,6 +13,8 @@ const AuthReg = () => {
     first_name: "",
     last_name: "",
     email: "",
+    year:"",
+    experience: "",
     password: ""
   });
 
@@ -31,7 +34,7 @@ const AuthReg = () => {
           alert(
             `${userCreated.get("first_name")}, you successfully registered!`
           );
-          navigate("/"); // this will go to our app in future
+          navigate("/");
         }
         setAdd(false);
       });
@@ -58,11 +61,14 @@ const AuthReg = () => {
 
   return (
     <div>
+      <h1 class='heading'>Create an Account</h1>
       <AuthForm
         user={newUser}
         onChange={onChangeHandler}
         onSubmit={onSubmitHandler}
       />
+      <br/>
+      <p class="acc"> By creating an account you will be added to our email list to recieve updates about audition dates and company events.</p>
     </div>
   );
 };
