@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const OfficerList = ({ officers }) => {
-
+// allow user to see pic of officer and their role
   return (
     <Container id='officer'>
       <Row md={3} className="g-4">

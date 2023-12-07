@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { checkUser } from "../Profile/AuthService"; 
 import Parse from "parse";
 import Button from "react-bootstrap/Button";
-
+// log out button
 const LogOut = () => {
     const navigate = useNavigate();
     const logOutHandler = () => {

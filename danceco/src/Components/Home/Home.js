@@ -1,5 +1,5 @@
 import Video from '../../static/images/Video.mov'
-
+// home page that user is automatically directed to
 export default function Home() {
     return (
       <section class='background'>

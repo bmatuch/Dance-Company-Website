@@ -12,7 +12,7 @@ const Officers = () => {
       setOfficers(officers);
     });
   }, []);
-
+// display all of the officers 
   return (
     <div>
       <h1 class='heading-center'>Meet your Officers</h1>
