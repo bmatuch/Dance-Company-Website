@@ -107,11 +107,6 @@ h2 {
   color: aqua;
 }
 
-h2.accordion-header{
-  margin:0;
-  text-align: center;
-}
-
 a.nav-link {
   font-size: 20px;
 }
@@ -128,6 +123,7 @@ div#officer {
 div.accordion {
   --bs-accordion-active-bg: white;
   --bs-accordion-btn-focus-box-shadow: white;
+  --bs-accordion-bg:#e3e3e3;
 }
 
 div.accordion-item{
@@ -203,7 +199,6 @@ h2.danceName {
 
 p.dance {
   font-family: 'Hedvig Letters Sans', sans-serif;
-  text-align: center;
 }
 
 a.officers-route {
@@ -211,7 +206,6 @@ a.officers-route {
 }
 
 div#dances.container {
-  text-align: center;
   background-color: #e3e3e3;
   border-radius: 30px;
   width: 80%;
