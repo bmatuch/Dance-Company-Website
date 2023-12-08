@@ -21,8 +21,6 @@ const ViewProfile = () => {
         <>
         <h1 className="heading">{user.get("first_name")} {user.get("last_name")}&nbsp;&nbsp; </h1>
         <p className="profile"><b>Audition Date: </b> {user.get("auditionDate")}<br />
-        {/* <b> Year:</b> {user.get("year")}<br /> */}
-        {/* <b> Experience:</b> {user.get("danceExperience")}<br /> */}
         <b> Notes:</b> {user.get("notes")}<br />
         <b> Team Placement:</b> {user.get("teamPlacement")}<br />
         <b> Audition Status:</b> {user.get("status")} </p>
