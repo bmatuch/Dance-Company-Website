@@ -102,7 +102,6 @@ export async function checkPresident() {
 };
 
 export function getUserId() {
-  //const Users = Parse.Object.extend("User");
 
   // get the current user 
   const currentUser = Parse.User.current();

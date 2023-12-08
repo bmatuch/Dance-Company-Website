@@ -56,7 +56,6 @@ const Protected = ({ element: Component, ...rest }) => {
           <h1 className="heading">President Admin Dashboard</h1>
           <br />
           <ProtectedProfiles users={allUsers} /> 
-          {/* <EditOfficersButton/> */}
           <LogOut />
         </div>
       );
